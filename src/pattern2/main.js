@@ -1,4 +1,4 @@
-const a = '模式2'
+const a = '模式'
 
 function testIT() {
   console.log('=xu=', a)

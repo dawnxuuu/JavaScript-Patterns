@@ -1,8 +1,23 @@
-const a = '模式1'
+// 单例模式
+class Singleton {
+  constructor (name) {
+    if (!Singleton.instance) {
+      this.name = name
+      Singleton.instance = this
+    }
 
-function testIT() {
-  console.log('=xu=', a)
-  alert(a)
+    return Singleton.instance
+  }
+
+  getName () {
+    console.log(this.name + '')
+  }
 }
 
-testIT()
+const a = new Singleton('第一次实例化')
+const b = new Singleton('第二次实例化')
+
+a.getName()
+b.getName()
+
+console.log('=xu=', a === b)
