@@ -20,4 +20,4 @@ const b = new Singleton('第二次实例化')
 a.getName()
 b.getName()
 
-console.log('=xu=', a === b)
+console.log('两实例相等', a === b)
